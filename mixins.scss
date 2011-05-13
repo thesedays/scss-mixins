@@ -88,3 +88,18 @@
 	-ms-transition-delay: $delay;
 	transition-delay: $delay;
 }
+
+@mixin transitionDuration($duration) {
+	-webkit-transition-duration: $duration;
+	-moz-transition-duration: $duration;
+	-o-transition-duration: $duration;
+	transition-duration: $duration;
+}
+
+@mixin transitionProperty($property) {
+	-webkit-transition-duration: $property;
+	-moz-transition-duration: $property;
+	-o-transition-duration: $property;
+	transition-duration: $property;
+}
+
