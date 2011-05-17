@@ -1,0 +1,81 @@
+/*
+ * Apply a CSS3 box-shadow
+ * @include boxShadow(5px, 5px, 10px, #000);
+ */
+@mixin boxShadow($x: 5px, $y: 5px, $blur: 10px, $color: #000) {
+	-moz-box-shadow: $x $y $blur $color;
+	-webkit-box-shadow: $x $y $blur $color;
+	box-shadow: $x $y $blur $color;
+}
+
+/*
+ * Apply an inset CSS3 box-shadow
+ * @include insetBoxShadow(5px, 5px, 10px, #000);
+ */
+@mixin insetBoxShadow($x: 5px, $y: 5px, $blur: 10px, $color: #000) {
+	-moz-box-shadow: inset $x $y $blur $color;
+	-webkit-box-shadow: inset $x $y $blur $color;
+	box-shadow: inset $x $y $blur $color;
+}
+
+/*
+ * Apply a CSS3 border radius
+ * @include borderRadius(4px);
+ */
+@mixin borderRadius($radius: 4px) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+/*
+ * Apply a CSS3 border radius to the bottom corners only
+ * @include borderBottomRadius(4px);
+ */
+@mixin borderBottomRadius($radius: 4px) {
+	-webkit-border-bottom-right-radius: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	-moz-border-radius-bottomright: $radius;
+	-moz-border-radius-bottomleft: $radius;
+	border-bottom-right-radius: $radius;
+	border-bottom-left-radius: $radius;
+}
+
+/*
+ * Apply a CSS3 linear gradient
+ *
+ * $from - The original colour stop of the gradient, eg #FF0000 or #FF0000 20%
+ * $to - The final colour stop of the gradient
+ * $fallback - A fallback background-color; if none is provided, the $from colour is used
+ * $start - The starting point of the gradient
+ *
+ * @include linearGradient(red, green);
+ * @include linearGradient(red, green, transparent);
+ * @include linearGradient(red 50%, green 100%);
+ */
+@mixin linearGradient($from, $to, $solid: false, $start: top) {
+	@if ($solid) {
+		background-color: $solid;
+	} @else {
+		background-color: $from;
+	}
+	background-image: -webkit-linear-gradient($start, $from, $to);
+	background-image: -moz-linear-gradient($start, $from, $to);
+	background-image: -ms-linear-gradient($start, $from, $to);
+	background-image: -o-linear-gradient($start, $from, $to);
+	background-image: linear-gradient($start, $from, $to);
+}
+
+/*
+ * Apply a CSS3 box-rotate
+ * @include boxRotate(10deg);
+ */
+@mixin boxRotate($deg) {
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	transform: rotate($deg);
+	zoom: 1;
+}
+
