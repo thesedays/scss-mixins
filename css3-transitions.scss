@@ -46,9 +46,9 @@
  * @include transitionProperty((height, width)); Multiple properties can be passed in surrounded by brackets
  */
 @mixin transitionProperty($property) {
-	-webkit-transition-duration: $property;
-	-moz-transition-duration: $property;
-	-o-transition-duration: $property;
-	transition-duration: $property;
+	-webkit-transition-property: $property;
+	-moz-transition-property: $property;
+	-o-transition-property: $property;
+	transition-property: $property;
 }
 
