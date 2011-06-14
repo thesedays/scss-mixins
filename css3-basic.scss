@@ -79,3 +79,14 @@
 	zoom: 1;
 }
 
+/*
+ * Box sizing
+ * content-box | border-box | padding-box
+ * @include boxSizing(border-box);
+ */
+@mixin boxSizing($sizing) {
+	-moz-box-sizing: $sizing;
+	-webkit-box-sizing: $sizing;
+	box-sizing: $sizing;
+}
+
