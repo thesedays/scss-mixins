@@ -1,0 +1,40 @@
+/*
+ * Mixin for placeholder styling
+*/
+@mixin placeHolder($color) {
+	&::-webkit-input-placeholder { color:$color; }
+	&:-moz-placeholder { color:$color; }
+}
+
+/*
+ * Mixin for basic CSS triangles
+*/
+@mixin triangle($direction:up, $color:#000, $size:100px) {
+	@if($direction == up) {
+		border-color: transparent transparent $color;
+		border-style: solid;
+		border-width: 0 $size $size;
+		height: 0;
+		width: 0;
+	}
+	@if($direction == down) {
+		border-color: $color transparent transparent transparent;
+ 		border-style: solid;
+  		border-width: $size;
+  		height:0;
+  		width:0;
+	}
+}
+
+/*
+ * Mixin for selection markup
+*/
+@mixin selection($background, $color, $element:false) {
+	@if($element) {
+		&::-moz-selection{ background:$background; color:$color; text-shadow:none; }
+		&::selection { background:$background; color:$color; text-shadow:none; }
+	} @else {
+		::-moz-selection{ background:$background; color:$color; text-shadow:none; }
+		::selection { background:$background; color:$color; text-shadow:none; }
+	}
+}

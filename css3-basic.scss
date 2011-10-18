@@ -102,3 +102,14 @@ border-radius: 1px 2px 3px 4px;
 	box-sizing: $sizing;
 }
 
+/*
+ * Apply a CSS3 transform-origin
+ * @include setTransformOrigin(origin);
+ */
+@mixin setTransformOrigin($origin) {
+	-moz-transform-origin:$origin;
+	-o-transform-origin:$origin;
+	-webkit-transform-origin:$origin;
+	-ms-transform-origin:$origin;
+	transform-origin:$origin;
+}
