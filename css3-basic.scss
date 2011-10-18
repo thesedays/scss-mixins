@@ -2,10 +2,10 @@
  * Apply a CSS3 box-shadow
  * @include boxShadow(5px, 5px, 10px, #000);
  */
-@mixin boxShadow($x: 5px, $y: 5px, $blur: 10px, $color: #000) {
-	-moz-box-shadow: $x $y $blur $color;
-	-webkit-box-shadow: $x $y $blur $color;
-	box-shadow: $x $y $blur $color;
+@mixin boxShadow($x: 5px, $y: 5px, $blur: 10px, $spread: 10px, $color: #000) {	
+	-webkit-box-shadow: $x $y $blur $spread $color;
+	   -moz-box-shadow: $x $y $blur $spread $color;
+	        box-shadow: $x $y $blur $spread $color;
 }
 
 /*
@@ -40,6 +40,16 @@
 	border-bottom-right-radius: $radius;
 	border-bottom-left-radius: $radius;
 }
+
+
+-moz-border-radius-topleft: 1px;
+-moz-border-radius-topright: 2px;
+-moz-border-radius-bottomright: 3px;
+-moz-border-radius-bottomleft: 4px;
+-webkit-border-radius: 1px 2px 3px 4px;
+border-radius: 1px 2px 3px 4px; 
+
+
 
 /*
  * Apply a CSS3 linear gradient
