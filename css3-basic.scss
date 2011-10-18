@@ -43,6 +43,19 @@
 	border-bottom-left-radius: $radius;
 }
 
+/*
+ * Apply a CSS3 border radius to the left corners only
+ * @include borderLeftRadius(4px);
+ */
+@mixin borderLeftRadius($radius: 4px) {
+	-webkit-border-top-left-radius: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	-moz-border-radius-topleft: $radius;
+	-moz-border-radius-bottomleft: $radius;
+	border-top-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+}
+
 
 /*
  * Apply a CSS3 linear gradient
