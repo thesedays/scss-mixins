@@ -23,9 +23,11 @@
  * @include borderRadius(4px);
  */
 @mixin borderRadius($radius: 4px) {
-	-moz-border-radius: $radius;
 	-webkit-border-radius: $radius;
-	border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+   	     -o-border-radius: $radius;
+	        border-radius: $radius;
 }
 
 /*
