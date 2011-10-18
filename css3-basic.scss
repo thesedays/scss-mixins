@@ -12,10 +12,10 @@
  * Apply an inset CSS3 box-shadow
  * @include insetBoxShadow(5px, 5px, 10px, #000);
  */
-@mixin insetBoxShadow($x: 5px, $y: 5px, $blur: 10px, $color: #000) {
-	-moz-box-shadow: inset $x $y $blur $color;
-	-webkit-box-shadow: inset $x $y $blur $color;
-	box-shadow: inset $x $y $blur $color;
+@mixin insetBoxShadow($x: 5px, $y: 5px, $blur: 10px, $spread: 10px, $color: #000) {
+	-webkit-box-shadow: inset $x $y $blur $spread $color;
+       -moz-box-shadow: inset $x $y $blur $spread $color;
+	        box-shadow: inset $x $y $blur $spread $color;
 }
 
 /*
