@@ -24,6 +24,20 @@
   		height:0;
   		width:0;
 	}
+	@if($direction == left) {
+		border-color: transparent $color transparent transparent;
+		border-style: solid;
+		border-width: $size $size $size 0;
+		height: 0;
+		width: 0;
+	}
+	@if($direction == right) {
+		border-color: transparent transparent transparent $color;
+ 		border-style: solid;
+  		border-width: $size 0 $size $size;
+  		height:0;
+  		width:0;
+	}
 }
 
 /*
