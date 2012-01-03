@@ -31,6 +31,32 @@
 }
 
 /*
+ * Apply a CSS3 border radius to the top corners only
+ * @include borderTopRadius(4px);
+ */
+@mixin borderTopRadius($radius: 4px) {
+	-webkit-border-top-right-radius: $radius;
+	-webkit-border-top-left-radius: $radius;
+	-moz-border-radius-topright: $radius;
+	-moz-border-radius-topleft: $radius;
+	border-top-right-radius: $radius;
+	border-top-left-radius: $radius;
+}
+
+/*
+ * Apply a CSS3 border radius to the right corners only
+ * @include borderRightRadius(4px);
+ */
+@mixin borderRightRadius($radius: 4px) {
+	-webkit-border-top-right-radius: $radius;
+	-webkit-border-bottom-right-radius: $radius;
+	-moz-border-radius-topright: $radius;
+	-moz-border-radius-bottomright: $radius;
+	border-top-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+}
+
+/*
  * Apply a CSS3 border radius to the bottom corners only
  * @include borderBottomRadius(4px);
  */
