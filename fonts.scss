@@ -5,15 +5,14 @@
 
 @mixin font-face($font-family, $font-url, $font-name) {
 	@font-face {
-		font-family:$font-family;
-		src:url($font-url + '/' + $font-name + '.eot');
-		src: url($font-url + '/' + $font-name + '.eot?#iefix') format('eot'),
-			 url($font-url + '/' + $font-name + '.woff') format('woff'),
-			 url($font-url + '/' + $font-name + '.ttf') format('truetype'),
-			 url($font-url + '/' + $font-name + '.svg#webfontBF9xh1gY') format('svg');
 		font: {
-			style:normal;
-			weight:normal;
+			family: $font-family;
+			style: normal;
+			weight: normal;
 		}
+		src: url($font-url + '/' + $font-name + '.eot') format('eot'), 
+			 url($font-url + '/' + $font-name + '.woff') format('woff'), 
+			 url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
+			 url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
 	}
 }
